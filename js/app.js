@@ -1,7 +1,7 @@
-let imageArray = [];
-let filteredArray = [];
 const submit = document.getElementById("submit");
 const stop = document.getElementById("stop");
+let imageArray = [];
+let filteredArray = [];
 let searchOn = true;
 let imgToRotate = 1;
 let interval;
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         // Checks to make sure they're not gifs
         const ext = ".jpg";
-        filteredArray = imageArray.filter((link) => {
-          return link.indexOf(ext) !== -1 && link.includes("redd.it");
+        filteredArray = imageArray.filter((imgUrl) => {
+          return imgUrl.indexOf(ext) !== -1 && imgUrl.includes("redd.it");
         });
         slideShow();
       })
